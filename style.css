@@ -15,6 +15,13 @@ header {
     font-size: 24px;
 }
 
+.footer-container {
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
 header, form {
     min-height: 20vh;
     display: flex;
@@ -67,6 +74,10 @@ form button:hover {
     flex: 1;
 }
 
+.todo-item {
+    width: 400px;
+}
+
 .trash-btn, .complete-btn {
     background: #ff6f47;
     color: white;
@@ -77,6 +88,14 @@ form button:hover {
 
 .complete-btn {
     background-color: rgb(73, 204, 73);
+}
+
+.trash-btn:hover {
+    background: rgb(238, 51, 51);
+}
+
+.complete-btn:hover {
+    background: rgb(5, 129, 245);
 }
 
 .todo-item {
@@ -118,7 +137,8 @@ select {
     color: #ff6f47;
     width: 10rem;
     cursor: pointer;
-    padding: 16px;
+    padding: 24px; /* was 16px */
+    font-size: 12px;
 }
 
 .select::after {
@@ -127,12 +147,34 @@ select {
     background: #ff6f47;
     top: 0;
     right: 0;
-    padding: 16px;
+    padding: 20px;
     pointer-events: none;
     transition: all 0.3s ease;
+    height: 32px;
 }
 
 .select:hover::after {
     background: white;
     color: #ff6f47;
+}
+
+@media only screen and (max-width: 600px) {
+    .todo-input {
+        width: 225px;
+        margin-left: 10px;
+    }
+
+    select {
+        width: 90px;
+    }
+
+    .todo-item {
+        width: 275px;
+    }
+
+    .select::after {
+        padding: 5px;
+        height: 100px;
+        
+    }
 }
