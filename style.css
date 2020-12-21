@@ -106,6 +106,22 @@ form button:hover {
     pointer-events: none; /* prevents clicking on the icon */
 }
 
+.social-icons {
+    text-decoration: none; /* removes the _ between the two different icons */
+}
+
+.fa-linkedin-in {
+    color: white;
+    padding: 2.5px;
+    font-size: 24px;
+}
+
+.fa-github {
+    color: white;
+    padding: 2.5px;
+    font-size: 24px;
+}
+
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
